@@ -42,7 +42,7 @@ const mentors = [
         bookedSlots: [],
         rating: 4.9,
         experience: "18+ years",
-        image: "/images/mentors/pixe.jpeg"
+        image: "./images/mentors/pixe.jpeg"
     }
 ];
 
