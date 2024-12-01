@@ -93,6 +93,22 @@ nav ul {
     list-style: none;
 }
 
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-flex;
+    align-items: center;
+}
+
 .nav-link {
     color: #fff;
     text-decoration: none;
@@ -115,6 +131,24 @@ nav ul {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.book-button {
+    margin-top: auto; /* Push it to the bottom */
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.book-button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -166,6 +200,13 @@ nav ul {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
 }
 
 .mentor-card::before {
@@ -366,7 +407,9 @@ footer {
         text-align: center;
         gap: 1rem;
     }
-}/* Center alignment for mentors section */
+}
+
+/* Center alignment for mentors section */
 #mentors {
     text-align: center;
     max-width: 1200px;
@@ -395,7 +438,7 @@ footer {
     border: 2px solid #ddd;
     border-radius: 8px;
     transition: all 0.3s ease;
-    background-color: var(--background-color);
+    background-color: white;
     color: var(--text-color);
 }
 
@@ -561,4 +604,25 @@ body.dark-mode .about-card {
 body.dark-mode .notification {
     background-color: var(--card-background);
     color: var(--text-color);
+}
+
+/* Ensure all text transitions within the mentor card are fast */
+.mentor-card p, .mentor-card h3, .mentor-card .rating, .mentor-card .available-slots {
+    transition: color 0.3s ease !important; /* Faster transition for text color */
+}
+
+/* Specifically target text color in dark mode for mentor card elements */
+body.dark-mode .mentor-card p,
+body.dark-mode .mentor-card h3,
+body.dark-mode .mentor-card .rating,
+body.dark-mode .mentor-card .available-slots {
+    color: var(--text-color-dark) !important;
+}
+
+/* Ensure the color transition is fast when returning to light mode */
+body:not(.dark-mode) .mentor-card p,
+body:not(.dark-mode) .mentor-card h3,
+body:not(.dark-mode) .mentor-card .rating,
+body:not(.dark-mode) .mentor-card .available-slots {
+    color: var(--text-color-light) !important;
 }

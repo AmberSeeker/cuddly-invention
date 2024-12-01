@@ -42,7 +42,7 @@ const mentors = [
         bookedSlots: [],
         rating: 4.9,
         experience: "18+ years",
-        image: "/api/placeholder/100/100"
+        image: "/images/mentors/pixe.jpeg"
     }
 ];
 
@@ -65,7 +65,7 @@ function displayMentors(filteredMentors = mentors) {
         mentorCard.style.animationDelay = `${index * 0.1}s`;
         
         mentorCard.innerHTML = `
-           <img src="pixe.jpeg" width="300" height="200" alt="${mentor.name}" class="mentor-image">
+           <img src="${mentor.image}" width="300" height="200" alt="${mentor.name}" class="mentor-image">
             <h3>${mentor.name}</h3>
             <p class="expertise"><strong>Expertise:</strong> ${mentor.expertise}</p>
             <p class="experience"><strong>Experience:</strong> ${mentor.experience}</p>
@@ -73,11 +73,10 @@ function displayMentors(filteredMentors = mentors) {
                 <span>★</span> ${mentor.rating}
             </div>
             <div class="available-slots">
-                <h4>Available Slots:</h4>
+                <h4>Available Slots: ${mentor.availableSlots.length}/${mentor.totalSlots}</h4>
                 <ul>
                     ${mentor.availableSlots.map(slot => `<li>${slot}</li>`).join('')}
                 </ul>
-                <p><strong>Available Slots: ${mentor.availableSlots.length}/${mentor.totalSlots}</strong></p>
             </div>
             <button onclick="bookMentor(${mentor.id})" class="book-button" ${mentor.availableSlots.length === 0 ? 'disabled' : ''}>
                 ${mentor.availableSlots.length === 0 ? 'No Slots Available' : 'Book Session'}
