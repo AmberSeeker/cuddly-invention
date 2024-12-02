@@ -8,8 +8,7 @@ const mentors = [
         availableSlots: ["Monday 2-3 PM", "Monday 3-4 PM", "Wednesday 4-5 PM", "Wednesday 5-6 PM"],
         bookedSlots: [],
         rating: 4.9,
-        experience: "15+ years",
-        image: ""
+        experience: "15+ years"
     },
     {
         id: 2,
@@ -19,8 +18,7 @@ const mentors = [
         availableSlots: ["Tuesday 1-2 PM", "Tuesday 2-3 PM", "Thursday 3-4 PM", "Thursday 4-5 PM"],
         bookedSlots: [],
         rating: 4.8,
-        experience: "12+ years",
-        image: ""
+        experience: "12+ years"
     },
     {
         id: 3,
@@ -30,8 +28,7 @@ const mentors = [
         availableSlots: ["Monday 3-4 PM", "Monday 4-5 PM", "Friday 2-3 PM", "Friday 3-4 PM"],
         bookedSlots: [],
         rating: 4.7,
-        experience: "10+ years",
-        image: ""
+        experience: "10+ years"
     },
     {
         id: 4,
@@ -41,8 +38,7 @@ const mentors = [
         availableSlots: ["Wednesday 1-2 PM", "Wednesday 2-3 PM", "Thursday 4-5 PM", "Thursday 5-6 PM"],
         bookedSlots: [],
         rating: 4.9,
-        experience: "18+ years",
-        image: "./images/mentors/pixe.jpeg"
+        experience: "18+ years"
     }
 ];
 
@@ -65,7 +61,7 @@ function displayMentors(filteredMentors = mentors) {
         mentorCard.style.animationDelay = `${index * 0.1}s`;
         
         mentorCard.innerHTML = `
-           <img src="${mentor.image ? mentor.image : './images/sample.jpeg'}" width="300" height="200" alt="${mentor.name}" class="mentor-image">
+           <img src="./images/mentors/${mentor.name}.png" alt="${mentor.name}" class="mentor-image" onerror="this.src='./images/mentors/failsafe.png'; this.style.width='300px'; this.style.height='200px'" width="300" height="200">
             <h3>${mentor.name}</h3>
             <p class="expertise"><strong>Expertise:</strong> ${mentor.expertise}</p>
             <p class="experience"><strong>Experience:</strong> ${mentor.experience}</p>
