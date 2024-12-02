@@ -9,7 +9,7 @@ const mentors = [
         bookedSlots: [],
         rating: 4.9,
         experience: "15+ years",
-        image: "/api/placeholder/100/100"
+        image: ""
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const mentors = [
         bookedSlots: [],
         rating: 4.8,
         experience: "12+ years",
-        image: "/api/placeholder/100/100"
+        image: ""
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const mentors = [
         bookedSlots: [],
         rating: 4.7,
         experience: "10+ years",
-        image: "/api/placeholder/100/100"
+        image: ""
     },
     {
         id: 4,
