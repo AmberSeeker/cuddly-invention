@@ -65,7 +65,7 @@ function displayMentors(filteredMentors = mentors) {
         mentorCard.style.animationDelay = `${index * 0.1}s`;
         
         mentorCard.innerHTML = `
-           <img src="${mentor.image}" width="300" height="200" alt="${mentor.name}" class="mentor-image">
+           <img src="${mentor.image ? mentor.image : './images/pixe.jpeg'}" width="300" height="200" alt="${mentor.name}" class="mentor-image">
             <h3>${mentor.name}</h3>
             <p class="expertise"><strong>Expertise:</strong> ${mentor.expertise}</p>
             <p class="experience"><strong>Experience:</strong> ${mentor.experience}</p>
